@@ -17,6 +17,9 @@ function getEmailDomain(email) {
     return email.slice(atPos + 1);
 }
 
+console.log(getEmailDomain("n.eeken@novi-education.nl"));
+console.log(getEmailDomain("t.mellink@novi.nl"));
+console.log(getEmailDomain("a.wiersma@outlook.com"));
 
 /* Opdracht  2 */
 // Schrijf een functie genaamd typeOfEmail, die een emailadres verwacht. De functie checkt of het emailadres een novi domein heeft (medewerker), een novi-education domein (student), of extern domein (zoals gmail of outlook)
@@ -27,7 +30,7 @@ function getEmailDomain(email) {
 // typeOfEmail("a.wiersma@outlook.com") geeft "Extern"
 
 function typeOfEmail(email) {
-    if (email.includes("@novi-education")) {
+    if (email.includes("@novi-education.nl")) {
         return "Student";
     } else if (email.includes("@novi.nl")) {
         return "Medewerker";
