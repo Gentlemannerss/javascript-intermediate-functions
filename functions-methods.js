@@ -64,11 +64,15 @@ function checkEmailValidity(email) {
     const lastCharacter = email.length -1;
     const hasDotOnLastCharacter = hasDot !== lastCharacter;
 
+    return !!(hasAt && !hasComma && hasDotOnLastCharacter);
+
+    /* ----- mijn manier: ------
     if (hasAt && !hasComma && hasDotOnLastCharacter) {
         return true;
     } else {
         return false;
     }
+    */
 }
 
 console.log(checkEmailValidity("n.eeken@novinl."));
